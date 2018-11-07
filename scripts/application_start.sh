@@ -1,3 +1,3 @@
 #!/bin/bash
 service httpd start
-python app.py &
+python /var/www/flask_wsgi_demo/app.py &
