@@ -1,5 +1,4 @@
 #!/bin/bash
-service httpd stop
 var2=`lsof -t -i:5000`
 if test -z "$var2" 
 then
@@ -7,5 +6,5 @@ then
 else
       echo "\$var is NOT empty"
 fi
-
+service httpd stop
 
