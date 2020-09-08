@@ -1,4 +1,4 @@
 #!/bin/bash
 
-exist 0
+service httpd stop
 

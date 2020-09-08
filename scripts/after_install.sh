@@ -1,4 +1,3 @@
 #!/bin/bash
-BASEDIR=/var/www/flask_wsgi_demo
-. $BASEDIR/venv/bin/activate
+BASEDIR=/home/ec2-user/opt/flasktest
 pip install -r $BASEDIR/requirements.txt
