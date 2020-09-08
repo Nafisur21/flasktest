@@ -1,3 +1,2 @@
 #!/bin/bash
-service httpd start
-python /home/ec2-user/opt/flasktest/app.py &
+gunicorn --bind=0.0.0.0:80 app:app --daemon
