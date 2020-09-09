@@ -14,17 +14,10 @@ hooks:
       timeout: 6000
       runas: root
   AfterInstall:
-    - location: scripts/install_os_dependencies.sh
+    - location: scripts/after_install.sh
       timeout: 6000
       runas: root
-    - location: scripts/install_python_dependencies.sh
-      timeout: 6000
-      runas: ec2-user
   ApplicationStart:
     - location: scripts/start_application.sh
-      timeout: 6000
-      runas: ec2-user
-  ApplicationStop:
-    - location: scripts/stop_application.sh
       timeout: 6000
       runas: ec2-user
