@@ -8,5 +8,10 @@ def hello():
     return "Hello World Nafisur"
 
 
+@app.route("/test")
+def index():
+    return "Test"
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
