@@ -9,6 +9,10 @@ permissions:
     owner: ec2-user
     group: ec2-user
 hooks:
+  ApplicationStop:
+    - location: scripts/stop_application.sh
+      timeout: 6000
+      runas: root
   BeforeInstall:
     - location: scripts/clean_instance.sh
       timeout: 6000
@@ -19,9 +23,5 @@ hooks:
       runas: root
   ApplicationStart:
     - location: scripts/application_start.sh
-      timeout: 6000
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_application.sh
       timeout: 6000
       runas: root
